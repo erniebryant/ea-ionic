@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PlaybackComponent } from './playback/playback.component';
+import { CoachSearchComponent } from './coach-search/coach-search.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
+  },
+  {
+    path: 'playback',
+    component: PlaybackComponent
+  },
+  {
+    path: 'search',
+    component: CoachSearchComponent
   }
 ];
 

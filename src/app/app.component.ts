@@ -19,6 +19,16 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Find a Coach',
+      url: '/search',
+      icon: 'search'
+    },
+    {
+      title: 'Playback',
+      url: '/playback',
+      icon: 'video'
     }
   ];
 

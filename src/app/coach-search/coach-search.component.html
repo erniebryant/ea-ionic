@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Find a Coach
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+        <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox">
+        <p></p>
+        <table *ngFor="let emp of mockData | collegeSearchFilterPipe: {firstName: searchText, lastName:searchText,  primarySport: searchText};  let i=index;">
+          <tr>
+            <td style="width: 5%;">{{i +1}}</td>
+            <td style="width: 10%;">{{emp.firstName}}</td>
+            <td style="width: 5%;">{{emp.lastName}}</td>
+            <td style="width: 15%;">{{emp.primarySport}}</td>
+          </tr>
+        </table>
+
+</ion-content>
