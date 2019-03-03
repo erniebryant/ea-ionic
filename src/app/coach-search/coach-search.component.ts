@@ -23,6 +23,46 @@ export class CoachSearchComponent implements OnInit {
       "firstName": "Kevin",
       "lastName": "Knox",
       "primarySport": "Basketball"
+    },
+    {
+      "firstName": "Terry",
+      "lastName": "Bradshaw",
+      "primarySport": "Football"
+    },
+    {
+      "firstName": "Nolan",
+      "lastName": "Ryan",
+      "primarySport": "Baseball"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Phelps",
+      "primarySport": "Swimming"
+    },
+    {
+      "firstName": "Shannon",
+      "lastName": "Miller",
+      "primarySport": "Gymnastics"
+    },
+    {
+      "firstName": "Magic",
+      "lastName": "Johnson",
+      "primarySport": "Basketball"
+    },
+    {
+      "firstName": "Shooter",
+      "lastName": "McGzvin",
+      "primarySport": "Golf"
+    },
+    {
+      "firstName": "Pete",
+      "lastName": "Sampress",
+      "primarySport": "Tennis"
+    },
+    {
+      "firstName": "Steve",
+      "lastName": "Wisnewski",
+      "primarySport": "Football"
     }
 ]
   constructor() { }

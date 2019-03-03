@@ -10,15 +10,19 @@
 </ion-header>
 
 <ion-content>
-        <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox">
-        <p></p>
-        <table *ngFor="let emp of mockData | collegeSearchFilterPipe: {firstName: searchText, lastName:searchText,  primarySport: searchText};  let i=index;">
-          <tr>
-            <td style="width: 5%;">{{i +1}}</td>
-            <td style="width: 10%;">{{emp.firstName}}</td>
-            <td style="width: 5%;">{{emp.lastName}}</td>
-            <td style="width: 15%;">{{emp.primarySport}}</td>
-          </tr>
-        </table>
+  <input [(ngModel)]="searchText" placeholder="Find Your Coach..." class="list-search-input">
+  
+
+  <ion-list>
+    <ion-item *ngFor="let item of mockData | collegeSearchFilterPipe: {firstName: searchText, lastName:searchText,  primarySport: searchText};  let i=index;">
+      <div>
+        {{item.firstName}} {{item.lastName}}
+      </div>
+      <div class="item-sport" slot="end">
+        {{item.primarySport}}
+      </div>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>

@@ -1,0 +1,18 @@
+$colors:(
+    primary: #3880ff,
+    primary-rgb: (56, 128, 255),
+    primary-contrast: #ffffff,
+    primary-contrast-rgb: (255, 255, 255),
+    primary-shade: #3171e0,
+    primary-tint: #4c8dff
+);
+
+.primary-btn {
+    background-color: #3880ff;//color($colors, primary);
+    color: #fff;//color($colors, primary-contrast);
+    line-height: 2;
+    width:100%;
+    padding:5px;
+    font-size: 1.4em;
+    border-radius: 0.5em;
+}
