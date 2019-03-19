@@ -1,6 +1,8 @@
 {
   "name": "EliteAccess",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "c7555468"
 }
