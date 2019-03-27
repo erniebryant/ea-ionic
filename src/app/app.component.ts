@@ -45,7 +45,7 @@ export class AppComponent {
     private statusBar: StatusBar,
     // private oauthService : OAuthService
   ) {
-    this.initializeApp();
+    // this.initializeApp();
 
     // if (oauthService.hasValidIdToken()) {
     //   this.rootPage = HomePage;
@@ -54,6 +54,8 @@ export class AppComponent {
     // }
   
     platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
     });

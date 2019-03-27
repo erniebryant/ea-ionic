@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+// import { StatusBar } from '@ionic-native/status-bar';
+// import { SplashScreen } from '@ionic-native/splash-screen';
 //import { Camera } from '@ionic-native/camera/ngx';
 //import { VideoCapturePlus, VideoCapturePlusOptions, MediaFile } from '@ionic-native/video-capture-plus';
 //import { Stripe } from '@ionic-native/stripe';
@@ -14,37 +16,47 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CoachSearchComponent } from './coach-search/coach-search.component';
+// import { CoachSearchComponent } from './coach-search/coach-search.component';
 import { PlaybackComponent } from './playback/playback.component';
 import { VideoEditorComponent } from './video-editor/video-editor.component';
-import { CollegeSearchFilterPipe } from './coach-search/coach-search-filter.pipe';
+//import { CollegeSearchFilterPipe } from './coach-search/coach-search-filter.pipe';
 
 // Videogular
-import {VgCoreModule} from 'videogular2/core';
+import {VgCoreModule, VgAPI} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
-import { ScreenPainterComponent } from './screen-painter/screen-painter.component';
-import { ScreenPainterButtonComponent } from './screen-painter-button/screen-painter-button.component';
-import { RecordButtonComponent } from './record-button/record-button.component';
+import {VideoEditorModule} from './video-editor/video-editor.module';
+import { CoachSearchComponent } from './coach-search/coach-search.component';
+import { CollegeSearchFilterPipe } from './coach-search/coach-search-filter.pipe';
+import { CoachDetailComponent } from './coach-detail/coach-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, CoachSearchComponent, PlaybackComponent, VideoEditorComponent, CollegeSearchFilterPipe, ScreenPainterComponent, ScreenPainterButtonComponent, RecordButtonComponent],
+  declarations: [
+    AppComponent,
+    PlaybackComponent,
+
+    CollegeSearchFilterPipe,
+    CoachSearchComponent,
+    CoachDetailComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
-    FormsModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    FormsModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    VideoEditorModule
   ],
   providers: [
     StatusBar,
 //    Camera,
     SplashScreen,
+    VgAPI,
 //    Stripe,
 //    ScreenOrientation,
 //    VideoCapturePlus,

@@ -14,7 +14,11 @@
   
 
   <ion-list>
-    <ion-item *ngFor="let item of mockData | collegeSearchFilterPipe: {firstName: searchText, lastName:searchText,  primarySport: searchText};  let i=index;">
+    <ion-item *ngFor="let item of mockData | collegeSearchFilterPipe: {firstName: searchText, lastName:searchText,  primarySport: searchText};  let i=index;"
+    [class.selected]="item === selectedCoach"
+    [routerLink]="['/coach', item.id]"
+    (click)="onSelect(item)"
+    >
       <div>
         {{item.firstName}} {{item.lastName}}
       </div>

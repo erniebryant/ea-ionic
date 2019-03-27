@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PlaybackComponent } from './playback/playback.component';
 import { VideoEditorComponent } from './video-editor/video-editor.component';
 import { CoachSearchComponent } from './coach-search/coach-search.component';
+import { CoachDetailComponent } from './coach-detail/coach-detail.component';
 
 const routes: Routes = [
   {
@@ -18,9 +19,14 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
+  // {
+  //   path: 'playback',
+  //   component: PlaybackComponent
+  // },
   {
-    path: 'playback',
-    component: PlaybackComponent
+    path: 'coach/:id',
+    component: CoachDetailComponent
+    // data: { coach: coach }
   },
   {
     path: 'editor',
