@@ -1,11 +1,25 @@
-<div *ngIf="c oach">
+<!-- Back button with no text and custom icon -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back" icon="arrow-left"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <h2>{{coach.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{coach.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="coach.name" placeholder="name"/>
-    </label>
+<ion-content>
+  <div class="coach-profile" *ngIf="coach">
+
+    <ion-avatar style="margin:30px auto;">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <h2>{{coach.name | uppercase}}</h2>
+    <div><span>id: </span>{{coach.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="coach.name" placeholder="name"/>
+      </label>
+    </div>
+
   </div>
-
-</div>
+</ion-content>

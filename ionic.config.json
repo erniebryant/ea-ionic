@@ -1,7 +1,9 @@
 {
   "name": "EliteAccess",
   "integrations": {
-    "cordova": {}
+    "cordova":{
+      "Replay": "Replay"
+    }
   },
   "type": "angular",
   "id": "c7555468"

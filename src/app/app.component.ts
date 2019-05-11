@@ -34,7 +34,27 @@ export class AppComponent {
       title: 'Video Editor',
       url: '/editor',
       icon: 'video'
-    }
+    },
+    {
+      title: 'Sign In',
+      url: '/sign-in',
+      icon: 'video'
+    },
+    {
+      title: 'Sign Up',
+      url: '/sign-up',
+      icon: 'video'
+    },
+    {
+      title: 'Coach Sign Up',
+      url: '/coach-registration',
+      icon: 'user-plus'
+    },
+    {
+      title: 'Login',
+      url: '/login',
+      icon: 'login'
+    },
   ];
 
   rootPage:any = HomePage;

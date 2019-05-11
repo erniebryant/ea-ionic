@@ -30,6 +30,7 @@ import {VideoEditorModule} from './video-editor/video-editor.module';
 import { CoachSearchComponent } from './coach-search/coach-search.component';
 import { CollegeSearchFilterPipe } from './coach-search/coach-search-filter.pipe';
 import { CoachDetailComponent } from './coach-detail/coach-detail.component';
+import { CoachRegistration } from './coach-registration/coach-registration.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CoachDetailComponent } from './coach-detail/coach-detail.component';
 
     CollegeSearchFilterPipe,
     CoachSearchComponent,
-    CoachDetailComponent
+    CoachDetailComponent,
+    CoachRegistration
   ],
   entryComponents: [],
   imports: [

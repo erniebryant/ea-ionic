@@ -7,7 +7,7 @@ import { switchMap, takeUntil, pairwise } from 'rxjs/operators'
 @Component({
   selector: 'app-screen-painter',
   //templateUrl: './screen-painter.component.html',
-  template: '<canvas #canvas></canvas>',
+  templateUrl: './screen-painter.component.html',
   styleUrls: ['./screen-painter.component.scss']
 })
 export class ScreenPainterComponent implements AfterViewInit {
@@ -21,12 +21,13 @@ export class ScreenPainterComponent implements AfterViewInit {
    @ViewChild('canvas') public canvas: ElementRef;
 
    // setting a width and height for the canvas
-   @Input() public width = 400;
-   @Input() public height = 400;
+   @Input() public width = 1200;
+   @Input() public height = 1200;
  
    private cx: CanvasRenderingContext2D;  
    
    public ngAfterViewInit() {
+     alert("ngAfterViewInit entered");
      // get the context
      const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
      this.cx = canvasEl.getContext('2d');
@@ -45,6 +46,7 @@ export class ScreenPainterComponent implements AfterViewInit {
    }
 
    private captureEvents(canvasEl: HTMLCanvasElement) {
+    alert("captureEvents entered");
     // this will capture all mousedown events from the canvas element
     fromEvent(canvasEl, 'mousedown')
       .pipe(

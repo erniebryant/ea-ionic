@@ -1,9 +1,11 @@
   <ion-content>
       
+    <app-record-button></app-record-button>
     <vg-player>
 
 
-      <vg-overlay-play></vg-overlay-play>
+      <!-- <vg-overlay-play></vg-overlay-play> -->
+      <app-top-control-bar></app-top-control-bar>
       <vg-buffering></vg-buffering>
       <vg-controls>
           <vg-play-pause></vg-play-pause>
@@ -12,8 +14,6 @@
               <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
           </vg-scrub-bar>
 
-          <!-- <app-screen-painter-button></app-screen-painter-button>
-          <app-record-button></app-record-button> -->
           <!-- <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar> 
     
           <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
@@ -27,6 +27,7 @@
           <!-- <vg-fullscreen></vg-fullscreen>  -->
       </vg-controls>
     
+      <app-screen-painter></app-screen-painter>
       
       <video playsinline webkit-playsinline [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin >
           <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
@@ -37,5 +38,5 @@
           <track kind="subtitles" label="Español" src="http://static.videogular.com/assets/subs/pale-blue-dot-es.vtt" srclang="es">
       </video>
     </vg-player>
-    <app-screen-painter></app-screen-painter>
+    
   </ion-content>

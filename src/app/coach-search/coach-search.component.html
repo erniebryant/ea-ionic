@@ -4,13 +4,13 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Find a Coach
+      <input [(ngModel)]="searchText" placeholder="Find Your Coach..." class="list-search-input">
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <input [(ngModel)]="searchText" placeholder="Find Your Coach..." class="list-search-input">
+  
   
 
   <ion-list>

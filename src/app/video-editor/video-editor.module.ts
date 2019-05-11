@@ -14,13 +14,15 @@ import { ScreenPainterButtonComponent } from '../screen-painter-button/screen-pa
 import { RecordButtonComponent } from '../record-button/record-button.component';
 import { VgAPI } from 'videogular2/core';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { TopControlBarComponent } from '../top-control-bar/top-control-bar.component';
 
 @NgModule({
   declarations: [
     VideoEditorComponent, 
     ScreenPainterComponent, 
     ScreenPainterButtonComponent, 
-    RecordButtonComponent
+    RecordButtonComponent,
+    TopControlBarComponent
   ],
   imports: [
     CommonModule,

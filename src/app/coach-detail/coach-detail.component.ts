@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CoachDetailComponent implements OnInit {
 
-  @Input() coach={name:"Michael Jordasn"};
+  @Input() coach={name:"Michael Jordan"};
 
   constructor() { }
 

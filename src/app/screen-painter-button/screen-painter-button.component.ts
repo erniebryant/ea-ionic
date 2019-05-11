@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-screen-painter-button',
@@ -7,12 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenPainterButtonComponent implements OnInit {
 
+  showPaintPanel:boolean = false;
+  @Input() getScreenPaintPanelStatus;
+  @Output() getScreenPaintPanelStatusChange = new EventEmitter<boolean>();
+  
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onButtonClick = () => {
-    alert("clicked");
+  public onPaintButtonClick = () => {
+    //alert("clicked");
+    this.showPaintPanel = !this.showPaintPanel; 
+
+    var elem = document.querySelector('canvas') as HTMLElement;
+
+    if (this.showPaintPanel){
+      elem.style.zIndex = "0";
+    }
+    else {
+      elem.style.zIndex = "-999";
+    }
   }
+
 }
