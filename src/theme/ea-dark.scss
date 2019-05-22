@@ -1,0 +1,66 @@
+:root {
+  --ion-background-color: #0a254a;
+  --ion-background-color-rgb: 10,37,74;
+
+  --ion-text-color: #eeeeee;
+  --ion-text-color-rgb: 238,238,238;
+
+  --ion-backdrop-color: #08977e;
+  --ion-backdrop-rgb: 8,151,126;
+
+  --ion-overlay-background-color: #08977e;
+
+  // --ion-border-color 	Border color
+  // --ion-box-shadow-color 	Box shadow color
+  --ion-tab-bar-background: #08977e;
+
+  --ion-tab-bar-background-focused: #08977e;
+  
+  // --ion-tab-bar-border-color 	Border color of the Tab bar
+  // --ion-tab-bar-color 	Color of the Tab bar
+  // --ion-tab-bar-color-activated 	Color of the activated Tab
+  --ion-toolbar-background: #08977e;
+  // --ion-toolbar-border-color 	Border color of the Toolbar
+  --ion-toolbar-color: #eeeeee;
+  // --ion-toolbar-color-activated 	Color of the activated components in the Toolbar
+  // --ion-toolbar-color-unchecked 	Color of the unchecked components in the Toolbar
+  // --ion-toolbar-color-checked 	Color of the checked components in the Toolbar
+  
+  // --ion-item-background 	Background of the Item
+  // --ion-item-background-activated 	Background of the activated Item
+  // --ion-item-border-color 	Border color of the Item
+  // --ion-item-color 	Color of the components in the Item
+  // --ion-placeholder-color 	Color of the placeholder in inputs
+
+
+  // Application Variables
+  --ion-font-family: helvetica, arial, sans-serif;
+  --ion-statusbar-padding:1.5em;
+  --ion-safe-area-top:0em;
+  --ion-safe-area-right:.5em;
+  --ion-safe-area-bottom: 1em;
+  --ion-safe-area-left: .5em;
+  --ion-margin:.5em;
+  --ion-padding:.5em;
+
+
+  --ion-color-step-50: #152f52;
+  --ion-color-step-100: #21395a;
+  --ion-color-step-150: #2c4363;
+  --ion-color-step-200: #384d6b;
+  --ion-color-step-250: #435773;
+  --ion-color-step-300: #4e617b;
+  --ion-color-step-350: #5a6b83;
+  --ion-color-step-400: #65758c;
+  --ion-color-step-450: #717f94;
+  --ion-color-step-500: #7c8a9c;
+  --ion-color-step-550: #8794a4;
+  --ion-color-step-600: #939eac;
+  --ion-color-step-650: #9ea8b5;
+  --ion-color-step-700: #aab2bd;
+  --ion-color-step-750: #b5bcc5;
+  --ion-color-step-800: #c0c6cd;
+  --ion-color-step-850: #ccd0d5;
+  --ion-color-step-900: #d7dade;
+  --ion-color-step-950: #e3e4e6;
+}
