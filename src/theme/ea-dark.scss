@@ -1,8 +1,8 @@
 :root {
-  --ion-background-color: #0a254a;
+  --ion-background-color: #eeeeee;
   --ion-background-color-rgb: 10,37,74;
 
-  --ion-text-color: #eeeeee;
+  --ion-text-color: #222222;
   --ion-text-color-rgb: 238,238,238;
 
   --ion-backdrop-color: #08977e;
@@ -12,7 +12,7 @@
 
   // --ion-border-color 	Border color
   // --ion-box-shadow-color 	Box shadow color
-  --ion-tab-bar-background: #08977e;
+  --ion-tab-bar-background: #0a254a;
 
   --ion-tab-bar-background-focused: #08977e;
   
@@ -26,11 +26,11 @@
   // --ion-toolbar-color-unchecked 	Color of the unchecked components in the Toolbar
   // --ion-toolbar-color-checked 	Color of the checked components in the Toolbar
   
-  // --ion-item-background 	Background of the Item
+  --ion-item-background: #eeeeee;
   // --ion-item-background-activated 	Background of the activated Item
   // --ion-item-border-color 	Border color of the Item
-  // --ion-item-color 	Color of the components in the Item
-  // --ion-placeholder-color 	Color of the placeholder in inputs
+  --ion-item-color: #222222;
+  --ion-placeholder-color: #333333;
 
 
   // Application Variables
