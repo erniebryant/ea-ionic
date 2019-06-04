@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
-//declare var Replay:any;
+//  declare var Replay:any;
 
 @Component({
   selector: 'app-record-button',
@@ -19,8 +19,6 @@ export class RecordButtonComponent implements OnInit {
 
   onRecordClick = () => {
     this.isRecording = !this.isRecording;
-    alert("isRecording = " + this.isRecording);
-
     if (this.isRecording) {
       this.stopRecording();
     }
@@ -41,6 +39,7 @@ export class RecordButtonComponent implements OnInit {
       this.startWebRecording();
     }
     
+    // animate record button
   };
 
   stopRecording = () => {
@@ -54,29 +53,28 @@ export class RecordButtonComponent implements OnInit {
       this.stopWebRecording();
     }
       
+    // stop record button animation
   }
 
   startIosRecording = () => {
-    alert("is ios!");
-      // window.cordova.plugins.Replay.startRecording(enableMic,
-      //   function() {
-      //       this.isRecording = true;
-      //     }, function(err) {
-      //       console.log(err);
-      //     }
-      // );
+      window.cordova.plugins.Replay.startRecording(true,
+        function() {
+            this.isRecording = true;
+          }, function(err) {
+            console.log(err);
+          }
+      );
   }
   stopIosRecording = () => {
-    alert("is ios!");
 
-      // window.cordova.plugins.Replay.stopRecording(
-      //   function() {
-      //     this.isRecording = false;
-      //       console.log('ok!');
-      //   }, function(err) {
-      //     console.log(err);
-      //   }
-      // );
+      window.cordova.plugins.Replay.stopRecording(
+        function() {
+          this.isRecording = false;
+            console.log('ok!');
+        }, function(err) {
+          console.log(err);
+        }
+      );
   }
 
   startAndroidRecording = () => {

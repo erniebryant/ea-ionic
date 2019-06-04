@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/img/EALogo.png"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title class="heading-1">Let's get you started...</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Select the video you'd like to review</p>
+        <button (click)="getVideo()"> Select Video</button>
+      </ion-card-content>
+    </ion-card>
+    
+</ion-content>

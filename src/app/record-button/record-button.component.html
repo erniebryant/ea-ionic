@@ -1,1 +1,9 @@
-<div id="RecordButton" (click)="onRecordClick()"></div>
+<div class="recording-button-container">
+    <input type="checkbox" id="RecordButton" (click)="onRecordClick()"/>
+    <label for="RecordButton"></label>
+    <div class="time">
+        <div class="h_m"></div>
+        <div class="s_ms"></div>
+    </div>
+</div>
+

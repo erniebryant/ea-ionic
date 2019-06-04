@@ -46,19 +46,18 @@ export class ScreenPainterComponent implements AfterViewInit {
    }
 
    private captureEvents(canvasEl: HTMLCanvasElement) {
-    alert("captureEvents entered");
     // this will capture all mousedown events from the canvas element
-    fromEvent(canvasEl, 'mousedown')
+    fromEvent(canvasEl, 'touchstart')
       .pipe(
         switchMap((e) => {
           // after a mouse down, we'll record all mouse moves
-          return fromEvent(canvasEl, 'mousemove')
+          return fromEvent(canvasEl, 'touchmove')
             .pipe(
               // we'll stop (and unsubscribe) once the user releases the mouse
               // this will trigger a 'mouseup' event    
-              takeUntil(fromEvent(canvasEl, 'mouseup')),
+              takeUntil(fromEvent(canvasEl, 'touchend')),
               // we'll also stop (and unsubscribe) once the mouse leaves the canvas (mouseleave event)
-              takeUntil(fromEvent(canvasEl, 'mouseleave')),
+              takeUntil(fromEvent(canvasEl, 'touchcancel')),
               // pairwise lets us get the previous value to draw a line from
               // the previous point to the current point    
               pairwise()

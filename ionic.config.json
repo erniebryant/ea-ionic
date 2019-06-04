@@ -2,7 +2,7 @@
   "name": "EliteAccess",
   "integrations": {
     "cordova":{
-      "Replay": "Replay"
+
     }
   },
   "type": "angular",

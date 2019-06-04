@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 // Ionic/Cordova Plugins
@@ -31,6 +31,7 @@ import { CoachSearchComponent } from './coach-search/coach-search.component';
 import { CollegeSearchFilterPipe } from './coach-search/coach-search-filter.pipe';
 import { CoachDetailComponent } from './coach-detail/coach-detail.component';
 import { CoachRegistration } from './coach-registration/coach-registration.component';
+import { LocalVideoLoaderComponent } from './pages/local-video-loader/local-video-loader.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CoachRegistration } from './coach-registration/coach-registration.compo
     CollegeSearchFilterPipe,
     CoachSearchComponent,
     CoachDetailComponent,
-    CoachRegistration
+    CoachRegistration,
+    LocalVideoLoaderComponent
   ],
   entryComponents: [],
   imports: [

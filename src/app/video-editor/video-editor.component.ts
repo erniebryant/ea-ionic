@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { ActivatedRoute } from '@angular/router'; 
 
 import { VgPlayer } from 'videogular2/core';
 // Videogular
@@ -12,9 +14,12 @@ import {VgAPI } from 'videogular2/core';
 })
 export class VideoEditorComponent implements OnInit {
 
-  constructor() { }
+  video = null;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.video = this.route.snapshot.paramMap.get('video');
   }
 
   api:VgAPI;

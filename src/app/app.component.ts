@@ -15,46 +15,51 @@ import {SignInPageModule as SignInPage} from './pages/sign-in/sign-in.module';
 })
 export class AppComponent {
   public appPages = [
+    // {
+    //   title: 'Home',
+    //   url: '/home',
+    //   icon: 'home'
+    // },
+    // {
+    //   title: 'Find a Coach',
+    //   url: '/search',
+    //   icon: 'search'
+    // },
+    // {
+    //   title: 'Playback',
+    //   url: '/playback',
+    //   icon: 'video'
+    // },
     {
       title: 'Home',
-      url: '/home',
+      url: '/',
       icon: 'home'
-    },
-    {
-      title: 'Find a Coach',
-      url: '/search',
-      icon: 'search'
-    },
-    {
-      title: 'Playback',
-      url: '/playback',
-      icon: 'video'
     },
     {
       title: 'Video Editor',
       url: '/editor',
       icon: 'video'
     },
-    {
-      title: 'Sign In',
-      url: '/sign-in',
-      icon: 'video'
-    },
-    {
-      title: 'Sign Up',
-      url: '/sign-up',
-      icon: 'video'
-    },
-    {
-      title: 'Coach Sign Up',
-      url: '/coach-registration',
-      icon: 'user-plus'
-    },
-    {
-      title: 'Login',
-      url: '/login',
-      icon: 'login'
-    },
+    // {
+    //   title: 'Sign In',
+    //   url: '/sign-in',
+    //   icon: 'video'
+    // },
+    // {
+    //   title: 'Sign Up',
+    //   url: '/sign-up',
+    //   icon: 'video'
+    // },
+    // {
+    //   title: 'Coach Sign Up',
+    //   url: '/coach-registration',
+    //   icon: 'user-plus'
+    // },
+    // {
+    //   title: 'Login',
+    //   url: '/login',
+    //   icon: 'login'
+    // },
   ];
 
   rootPage:any = HomePage;
