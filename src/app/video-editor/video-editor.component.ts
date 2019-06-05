@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router'; 
 
@@ -12,14 +12,19 @@ import {VgAPI } from 'videogular2/core';
   templateUrl: './video-editor.component.html',
   styleUrls: ['./video-editor.component.scss']
 })
-export class VideoEditorComponent implements OnInit {
+export class VideoEditorComponent implements AfterViewInit {
 
   video = null;
 
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.video = this.route.snapshot.paramMap.get('video');
+  ngAfterViewInit() {
+    this.route.paramMap.subscribe(params => {
+      this.video = params.get("video");
+      alert("this.video = " + params.get("video"));
+    });
+    // this.video = this.route.snapshot.paramMap.get('video');
+    
   }
 
   api:VgAPI;
